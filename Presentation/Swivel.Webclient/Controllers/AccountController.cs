@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Swivel.Webclient.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private readonly IAuthService _authService;
         private IMapper _autoMapper;
@@ -52,7 +52,7 @@ namespace Swivel.Webclient.Controllers
                     AddErrors(result.Data);
                 }
                 else
-                return RedirectToAction("Error", "Handler");
+                    return RedirectToAction("Acknowledge", new { message = result.Message });
                 // handle failure
                 // navigate to acknowledge page
             }
@@ -91,7 +91,7 @@ namespace Swivel.Webclient.Controllers
                 }
             }
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }
@@ -101,7 +101,7 @@ namespace Swivel.Webclient.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Details", "User");
+            return RedirectToLocal("Login");
         }
         private void AddErrors(IdentityResult result)
         {

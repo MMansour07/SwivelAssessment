@@ -11,7 +11,7 @@ using Swivel.Core.Helper;
 namespace Swivel.Webclient.Controllers
 {
     [Authorize(Roles = ERole.SuperAdmin + "," + ERole.Admin)]
-    public class UserController : Controller
+    public class UserController : BaseController
     {
         private readonly IAuthService _authService;
         private IAuthenticationManager AuthenticationManager
@@ -53,7 +53,7 @@ namespace Swivel.Webclient.Controllers
             if (response.Success)
                 return View(response.Data);
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }
@@ -65,7 +65,7 @@ namespace Swivel.Webclient.Controllers
             if (response.Success)
                 return View(response.Data);
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }
@@ -80,7 +80,7 @@ namespace Swivel.Webclient.Controllers
                 if (response.Success)
                     return RedirectToAction("Details");
                 else
-                    return RedirectToAction("Error", "Handler");
+                    return RedirectToAction("Acknowledge", new { message = response.Message });
                 // handle failure
                 // navigate to acknowledge page
 
@@ -95,7 +95,7 @@ namespace Swivel.Webclient.Controllers
             if (response.Success)
                 return View(response.Data);
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }
@@ -116,7 +116,7 @@ namespace Swivel.Webclient.Controllers
                 return View();
             }
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }
@@ -130,7 +130,7 @@ namespace Swivel.Webclient.Controllers
             if (response.Success)
                 return View(response.Data);
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }

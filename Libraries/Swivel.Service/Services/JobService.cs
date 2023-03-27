@@ -127,7 +127,7 @@ namespace Swivel.Service.Services
                             using (var stream = obj.NewFiles[i].InputStream)
                             {
                                 var response = await _cloudinary.UploadAsync(new VideoUploadParams() { File = new FileDescription(obj.NewFiles[i].FileName, stream) });
-                                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                                if (response.StatusCode == HttpStatusCode.OK)
                                     videoUploadResult.Add(response);
                                 else
                                     break;
@@ -135,6 +135,7 @@ namespace Swivel.Service.Services
                             }
                         }
                     }
+                    // Yhere is no one update statement for the entity (job) and its children in Enitiy framowrk / and that is one of the powerful features of entity framework core
                     if (obj.EliminatedIds != null)
                     await _unitOfWork.mediaRepository.Delete(i => obj.EliminatedIds.Contains(i.Id));
 

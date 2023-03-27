@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\General\ErrorDto.cs" />
     <Compile Include="Dtos\General\ResponseModel.cs" />
     <Compile Include="Dtos\General\TableModel.cs" />
     <Compile Include="Dtos\General\RequestModel.cs" />

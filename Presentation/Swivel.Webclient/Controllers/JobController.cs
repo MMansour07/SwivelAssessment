@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace Swivel.Webclient.Controllers
 {
     [Authorize(Roles = ERole.Admin)]
-    public class JobController : Controller
+    public class JobController : BaseController
     {
         private readonly IJobService _jobService;
 
@@ -73,7 +73,7 @@ namespace Swivel.Webclient.Controllers
             if (response.Success)
                 return View(response.Data);
             else
-                return RedirectToAction("Error", "Handler");
+                return RedirectToAction("Acknowledge", new { message = response.Message });
             // handle failure
             // navigate to acknowledge page
         }

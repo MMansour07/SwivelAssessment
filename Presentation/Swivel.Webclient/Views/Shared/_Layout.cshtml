@@ -21,10 +21,14 @@
     <script src="~/Content/assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6"></script>
     <script src="~/Content/assets/js/scripts.bundle.js?v=7.0.6"></script>
 
+    <script>
+        function noBack() { window.history.forward(); }
+    </script>
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
 
     <!--begin::Main-->
     <!--begin::Header Mobile-->

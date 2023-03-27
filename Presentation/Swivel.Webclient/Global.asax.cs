@@ -20,8 +20,8 @@ namespace Swivel.Webclient
         }
         protected void Application_Error(object sender, EventArgs e)
         {
-            Server.ClearError();
-            Response.Redirect("~/Error");
+            //Server.ClearError();
+            //Response.Redirect("~/Error");
         }
     }
 }

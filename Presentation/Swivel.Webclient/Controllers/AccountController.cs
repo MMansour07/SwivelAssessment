@@ -101,7 +101,7 @@ namespace Swivel.Webclient.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToLocal("Login");
+            return RedirectToAction("Details", "User");
         }
         private void AddErrors(IdentityResult result)
         {

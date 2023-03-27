@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{67F6E1C1-E3C0-4C85-B8EB-08344C482BF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{03A9E80A-DF1D-4B51-AC5F-EA3152E1B897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Core", "Libraries\Swivel.Core\Swivel.Core.csproj", "{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Data", "Libraries\Swivel.Data\Swivel.Data.csproj", "{D5898BFB-16B5-484E-B3E6-A4871278386E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Service", "Libraries\Swivel.Service\Swivel.Service.csproj", "{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Infrastructure", "Presentation\Swivel.Infrastructure\Swivel.Infrastructure.csproj", "{914EBB60-CEB3-4903-9BB5-13422D663CE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Webclient", "Presentation\Swivel.Webclient\Swivel.Webclient.csproj", "{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5898BFB-16B5-484E-B3E6-A4871278386E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5898BFB-16B5-484E-B3E6-A4871278386E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5898BFB-16B5-484E-B3E6-A4871278386E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5898BFB-16B5-484E-B3E6-A4871278386E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{914EBB60-CEB3-4903-9BB5-13422D663CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914EBB60-CEB3-4903-9BB5-13422D663CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914EBB60-CEB3-4903-9BB5-13422D663CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914EBB60-CEB3-4903-9BB5-13422D663CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A21B57C-AEFC-4AF4-8C3E-3742F68B4C9B} = {67F6E1C1-E3C0-4C85-B8EB-08344C482BF2}
+		{D5898BFB-16B5-484E-B3E6-A4871278386E} = {67F6E1C1-E3C0-4C85-B8EB-08344C482BF2}
+		{8E7D73EF-8F1C-4166-9F89-8FCFDFAD671E} = {67F6E1C1-E3C0-4C85-B8EB-08344C482BF2}
+		{914EBB60-CEB3-4903-9BB5-13422D663CE1} = {03A9E80A-DF1D-4B51-AC5F-EA3152E1B897}
+		{B33676FE-AEC8-4AE0-8CC0-03E9D9D20AE2} = {03A9E80A-DF1D-4B51-AC5F-EA3152E1B897}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AA152A9-F13C-4F97-B82D-1B434EA7906A}
+	EndGlobalSection
+EndGlobal

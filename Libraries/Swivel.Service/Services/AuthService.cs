@@ -75,6 +75,8 @@ namespace Swivel.Service
                     if(result.Succeeded)
                     await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
+                    await _identityRepository.UpdateUserActivityAsync(userModel.Email);
+
                     return new ResponseModel<IdentityResult>() { Data = response, Success = true};
                 }
                 else

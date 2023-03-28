@@ -158,12 +158,13 @@ namespace Swivel.Service.Services
         }
 
 
-        public async Task<ResponseModel<int>> DeleteAllJobs()
+        public async Task<ResponseModel<int>> DeleteAllJobs(string userId)
         {
             try
             {
                 // ask if we should delete video from the cloud or not
-                await _unitOfWork.jobRepository.Delete(i => i.Id > 0);
+                // keep tracking uploaded videos before
+                await _unitOfWork.jobRepository.Delete(i => i.UserId == userId);
                 
                 return new ResponseModel<int>() { Data = await _unitOfWork.SaveChanges(), Success = true };
             }
@@ -179,6 +180,7 @@ namespace Swivel.Service.Services
             try
             {
                 // ask if we should delete video from the cloud or not
+                // keep tracking uploaded videos before
 
                 await _unitOfWork.jobRepository.Delete(i => i.Id == id);
 

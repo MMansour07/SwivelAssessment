@@ -10,7 +10,7 @@ namespace Swivel.Service.Interfaces
         Task<ResponseModel<NewJobDto>> CreateJobAsync(NewJobDto obj);
         Task<ResponseModel<EditJobDto>> FindJobAsync(int Id);
         Task<ResponseModel<EditJobPostDto>> EditJobAsync(EditJobPostDto obj);
-        Task<ResponseModel<int>> DeleteAllJobs();
+        Task<ResponseModel<int>> DeleteAllJobs(string userId);
         Task<ResponseModel<int>> DeleteJob(int id);
     }
 }

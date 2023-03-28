@@ -118,7 +118,7 @@ namespace Swivel.Webclient.Controllers
         public async Task<ActionResult> DeleteAll()
         {
             // not soft delete
-            var response = await _jobService.DeleteAllJobs();
+            var response = await _jobService.DeleteAllJobs(User.Identity.GetUserId());
             return Json(response, JsonRequestBehavior.AllowGet);
         }
     }
